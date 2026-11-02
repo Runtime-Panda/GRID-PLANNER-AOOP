@@ -18,18 +18,28 @@ public class Feeder {
     }
 
     public Feeder(int substationId, String feederCode, String conductorType, double maxCurrentAmp, double lengthKm) {
-        this(0, substationId, feederCode, conductorType, maxCurrentAmp, lengthKm);
+        this.substationId = substationId;
+        this.feederCode = feederCode;
+        this.conductorType = conductorType;
+        this.maxCurrentAmp = maxCurrentAmp;
+        this.lengthKm = lengthKm;
     }
 
     public int getId() { return id; }
-    public int getSubstationId() { return substationId; }
-    public String getFeederCode() { return feederCode; }
-    public String getConductorType() { return conductorType; }
-    public double getMaxCurrentAmp() { return maxCurrentAmp; }
-    public double getLengthKm() { return lengthKm; }
+    public void setId(int id) { this.id = id; }
 
-    @Override
-    public String toString() {
-        return feederCode + " (" + lengthKm + " km)";
-    }
+    public int getSubstationId() { return substationId; }
+    public void setSubstationId(int substationId) { this.substationId = substationId; }
+
+    public String getFeederCode() { return feederCode; }
+    public void setFeederCode(String feederCode) { this.feederCode = feederCode; }
+
+    public String getConductorType() { return conductorType; }
+    public void setConductorType(String conductorType) { this.conductorType = conductorType; }
+
+    public double getMaxCurrentAmp() { return maxCurrentAmp; }
+    public void setMaxCurrentAmp(double maxCurrentAmp) { this.maxCurrentAmp = maxCurrentAmp; }
+
+    public double getLengthKm() { return lengthKm; }
+    public void setLengthKm(double lengthKm) { this.lengthKm = lengthKm; }
 }
