@@ -10,7 +10,6 @@ import java.awt.*;
 public class App {
     public static void main(String[] args) {
         try {
-            // Force cross-platform look so custom colors render properly without OS overrides
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
         } catch (Exception ignored) {}
 

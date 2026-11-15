@@ -1,0 +1,269 @@
+Nov 15, 2026 11:45:11 PM com.gridplanner.util.GridLogger error
+SEVERE: Error fetching substations
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at com.gridplanner.config.DatabaseConnection.getConnection(DatabaseConnection.java:20)
+	at com.gridplanner.dao.SubstationDAO.findAll(SubstationDAO.java:39)
+	at com.gridplanner.ui.SubstationPanel.loadTableData(SubstationPanel.java:141)
+	at com.gridplanner.ui.SubstationPanel.<init>(SubstationPanel.java:84)
+	at com.gridplanner.App.lambda$main$0(App.java:30)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 19 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:549)
+	at java.base/sun.nio.ch.Net.connect(Net.java:538)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:590)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 22 more
+
+Nov 15, 2026 11:45:16 PM com.gridplanner.util.GridLogger error
+SEVERE: Error fetching substations
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at com.gridplanner.config.DatabaseConnection.getConnection(DatabaseConnection.java:20)
+	at com.gridplanner.dao.SubstationDAO.findAll(SubstationDAO.java:39)
+	at com.gridplanner.ui.FeederPanel.populateDropdowns(FeederPanel.java:108)
+	at com.gridplanner.ui.FeederPanel.refreshAll(FeederPanel.java:100)
+	at com.gridplanner.ui.FeederPanel.<init>(FeederPanel.java:96)
+	at com.gridplanner.App.lambda$main$0(App.java:31)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 20 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:549)
+	at java.base/sun.nio.ch.Net.connect(Net.java:538)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:590)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 23 more
+
+Nov 15, 2026 11:45:18 PM com.gridplanner.util.GridLogger error
+SEVERE: Error fetching feeders
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at com.gridplanner.config.DatabaseConnection.getConnection(DatabaseConnection.java:20)
+	at com.gridplanner.dao.FeederDAO.findAll(FeederDAO.java:42)
+	at com.gridplanner.ui.FeederPanel.loadTableData(FeederPanel.java:182)
+	at com.gridplanner.ui.FeederPanel.refreshAll(FeederPanel.java:101)
+	at com.gridplanner.ui.FeederPanel.<init>(FeederPanel.java:96)
+	at com.gridplanner.App.lambda$main$0(App.java:31)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 20 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:549)
+	at java.base/sun.nio.ch.Net.connect(Net.java:538)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:590)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 23 more
+
+Nov 15, 2026 11:45:18 PM com.gridplanner.util.GridLogger error
+SEVERE: Error fetching feeders
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at com.gridplanner.config.DatabaseConnection.getConnection(DatabaseConnection.java:20)
+	at com.gridplanner.dao.FeederDAO.findAll(FeederDAO.java:42)
+	at com.gridplanner.ui.TransformerPanel.populateFeederDropdown(TransformerPanel.java:103)
+	at com.gridplanner.ui.TransformerPanel.refreshAll(TransformerPanel.java:96)
+	at com.gridplanner.ui.TransformerPanel.<init>(TransformerPanel.java:92)
+	at com.gridplanner.App.lambda$main$0(App.java:32)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 20 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:549)
+	at java.base/sun.nio.ch.Net.connect(Net.java:538)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:590)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 23 more
+
+Nov 15, 2026 11:45:19 PM com.gridplanner.util.GridLogger error
+SEVERE: Error fetching joined transformers
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at com.gridplanner.config.DatabaseConnection.getConnection(DatabaseConnection.java:20)
+	at com.gridplanner.dao.TransformerDAO.findAllWithFeederCode(TransformerDAO.java:69)
+	at com.gridplanner.ui.TransformerPanel.loadTableData(TransformerPanel.java:175)
+	at com.gridplanner.ui.TransformerPanel.refreshAll(TransformerPanel.java:97)
+	at com.gridplanner.ui.TransformerPanel.<init>(TransformerPanel.java:92)
+	at com.gridplanner.App.lambda$main$0(App.java:32)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:323)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:714)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:693)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	... 20 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:549)
+	at java.base/sun.nio.ch.Net.connect(Net.java:538)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:590)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:284)
+	at java.base/java.net.Socket.connect(Socket.java:668)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 23 more
+

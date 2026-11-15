@@ -1,6 +1,9 @@
 package com.gridplanner.model;
 
-public class Feeder {
+import com.gridplanner.exception.GridValidationException;
+import com.gridplanner.interfaces.Validatable;
+
+public class Feeder implements Validatable {
     private int id;
     private int substationId;
     private String feederCode;
@@ -18,28 +21,26 @@ public class Feeder {
     }
 
     public Feeder(int substationId, String feederCode, String conductorType, double maxCurrentAmp, double lengthKm) {
-        this.substationId = substationId;
-        this.feederCode = feederCode;
-        this.conductorType = conductorType;
-        this.maxCurrentAmp = maxCurrentAmp;
-        this.lengthKm = lengthKm;
+        this(0, substationId, feederCode, conductorType, maxCurrentAmp, lengthKm);
+    }
+
+    @Override
+    public void validate() throws GridValidationException {
+        if (feederCode == null || feederCode.trim().isEmpty()) {
+            throw new GridValidationException("Feeder code is required.");
+        }
+        if (conductorType == null || conductorType.trim().isEmpty()) {
+            throw new GridValidationException("Conductor type is required.");
+        }
+        if (maxCurrentAmp <= 0 || lengthKm <= 0) {
+            throw new GridValidationException("Max current (Amp) and length (km) must be positive.");
+        }
     }
 
     public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
     public int getSubstationId() { return substationId; }
-    public void setSubstationId(int substationId) { this.substationId = substationId; }
-
     public String getFeederCode() { return feederCode; }
-    public void setFeederCode(String feederCode) { this.feederCode = feederCode; }
-
     public String getConductorType() { return conductorType; }
-    public void setConductorType(String conductorType) { this.conductorType = conductorType; }
-
     public double getMaxCurrentAmp() { return maxCurrentAmp; }
-    public void setMaxCurrentAmp(double maxCurrentAmp) { this.maxCurrentAmp = maxCurrentAmp; }
-
     public double getLengthKm() { return lengthKm; }
-    public void setLengthKm(double lengthKm) { this.lengthKm = lengthKm; }
 }
